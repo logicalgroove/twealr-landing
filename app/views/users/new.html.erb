@@ -1,20 +1,29 @@
-<div class="hero">
-    <p class="large brandon">Harry&#8217;s is live</p>
-    <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
-</div>
+<div class='row'>
+  <div class='col-sm-6 col-sm-offset-3'>
+    <br>
+    <div class="jumbotron">
+      <h1 class='text-center'>Twealr</h1>
+      <h2 class='text-center'>Together we heal!</h2>
+    </div>
 
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-    <% if Rails.application.config.ended %>
-        <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-        <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-        <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
-        <p class="again brandon">Thank You Again!</p>
-    <% else %>
-        <div class="key"></div>
-        <p class="byline brandon">Be the first to know</p>
-        <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+    <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+        <% if Rails.application.config.ended %>
+            <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+            <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
+            <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
+            <p class="again brandon">Thank You Again!</p>
+        <% else %>
+            <div class="key"></div>
+            <p class="byline brandon">Be the first to know</p>
+            <%= form_for @user, :url => { :action => "create" }, class: 'form-group' do |f| %>
+              <div class="input-group">
+                <%= f.text_field :email, :placeholder => "Enter Email", :class => "form-control" %>
+                <span class="input-group-btn">
+                  <input class="btn btn-primary btn-large" name="commit" type="submit" value="Step Inside" />
+                </span>
+              </div>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
+  </div>
 </div>
