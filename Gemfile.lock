@@ -50,6 +50,9 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    byebug (3.2.0)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
     coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -58,6 +61,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    columnize (0.8.9)
+    debugger-linecache (1.2.0)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
     delayed_job_active_record (0.4.4)
@@ -171,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bootstrap-sass
+  byebug
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
   pg

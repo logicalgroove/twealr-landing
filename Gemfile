@@ -24,6 +24,7 @@ group :assets do
 end
 
 group :development do
+  gem 'byebug'
   gem 'pry'
 end
 
