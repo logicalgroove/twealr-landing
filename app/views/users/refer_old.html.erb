@@ -1,0 +1,19 @@
+<div class="hero">
+    <div class="page-content clearfix">
+          <br>
+          <div class="col-lg-4 col-lg-offset-4 text-center">
+            <% twitter_message = "yoyoyo" %>
+            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter</p>
+            <div class="social-links">
+              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>">
+                <i id="social" class="fa fa-facebook-square fa-3x social-fb"></i>
+              </a>
+              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>">
+                <i id="social" class="fa fa-twitter-square fa-3x social-tw"></i>
+              </a>
+            </div>
+            <input class="form-control refer-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" disabled>
+          </div>
+    </div>
+</div>
+

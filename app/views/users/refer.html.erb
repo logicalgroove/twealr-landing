@@ -1,19 +1,59 @@
+<!--main-->
+<section class="main main-reffer">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <!--logo-->
+        <div class="logo"><img src="/assets/start/logo.png" data-at2x="/assets/start/logo@2x.png" alt="logo"></div>
+        <!--logo end-->
+      </div>
+      <div class="col-md-6 col-sm-6">
+
+        <!--social-->
+        <div class="social text-center">
+          <ul>
+            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+        <!--social end-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+        <!--welcome-message-->
+        <header class="welcome-message text-center">
+          <h1><span class="rotat">Twealr - together we heal</h1>
+          <p>Share your unique link via email, Facebook <br>or Twitter</span></p>
+        </header>
+        <!--welcome-message end-->
+
+        <!--sub-form-->
 <div class="hero">
     <div class="page-content clearfix">
           <br>
-          <div class="col-lg-4 col-lg-offset-4 text-center">
-            <% twitter_message = "yoyoyo" %>
-            <p class="subtitle brandon">Share your unique link via email, Facebook<br>or Twitter</p>
-            <div class="social-links">
-              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>">
-                <i id="social" class="fa fa-facebook-square fa-3x social-fb"></i>
-              </a>
-              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>">
-                <i id="social" class="fa fa-twitter-square fa-3x social-tw"></i>
-              </a>
-            </div>
-            <input class="form-control refer-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" disabled>
+          <% twitter_message = "yoyoyo" %>
+          <div class="ref-div col-lg-6 col-lg-offset-3 text-center" contenteditable="true" disabled="true" onclick="document.execCommand('selectAll',false,null)">
+            <%= root_url %>?ref=<%= @user.referral_code %>
           </div>
     </div>
 </div>
+
+        <!--sub-form end-->
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--main end-->
+
+<!--Features-->
+
+
+<!--CONTACT END-->
+
 

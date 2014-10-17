@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 <%= @bodyId %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
+<head>
+        <title>Twealr - Together we heal!</title>
+        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+        <meta property="og:title" content="Twealr - Together we heal!"/>
+        <meta property="og:description" content="Together we heal!"/>
+        <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
+        <meta property="og:url" content="<%= root_url %>"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+        <%= stylesheet_link_tag "core.css", :media => "all" %>
+        <%= csrf_meta_tags %>
+</head>
+<body id="<%= @bodyId %>">
+  <div class='container'>
+        <%= yield %>
+  </div>
+
+
+
+</body>
+</html>

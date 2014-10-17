@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie6 <%= @bodyId %>"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7 <%= @bodyId %>"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8 <%= @bodyId %>"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
+<html>
 <head>
-        <title>Harry&#8217;s &ndash; Tell Friends, Shave for Free</title>
-        <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-        <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <meta property="og:title" content="Harry’s is coming!"/>
-        <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
-        <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
-        <meta property="og:url" content="<%= root_url %>"/>
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
-        <%= stylesheet_link_tag "core.css", :media => "all" %>
-        <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twealr - Together We Heal</title>
+<meta name="description" content="Coming Soon Responsive Template">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<%= stylesheet_link_tag 'application', media: "all" %>
+<%= javascript_include_tag 'application'%>
 </head>
 <body id="<%= @bodyId %>">
-  <div class='container'>
-        <%= yield %>
+  <%= yield %>
+<!--PRELOAD-->
+<div id="preloader">
+  <div id="status"></div>
+</div>
+<!--end PRELOAD--> 
+<!--site-footer-->
+<footer class="site-footer section-spacing">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="scroll-top"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
+
+        <!--social-->
+
+        <ul class="social">
+          <li class="wow fadeInUp"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li class="wow fadeInUp"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li class="wow fadeInUp"><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+
+        <!--social end-->
+
+        <small class="wow fadeInUp">&copy; Copyright Start. All Rights Reserved.</small> </div>
+    </div>
   </div>
-
-
-
+</footer>
+<!--site-footer end-->
 </body>
 </html>
