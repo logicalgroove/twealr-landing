@@ -50,10 +50,11 @@ class UsersController < ApplicationController
             end
 
             @user.save
-        else
-         if @user.referals.size == 5
-           @user.send_email
-         end
+
+            #send grant 25 dollars email
+            if @user.referrer.referrals.size == 5
+              UserMailer.grant_email(@user.referrer).deliver
+            end
         end
 
         # Send them over refer action
