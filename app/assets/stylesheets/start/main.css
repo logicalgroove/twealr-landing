@@ -558,6 +558,7 @@ ul.countdown li p { font-size: 12.642px; }
 }
 body#refer .main-reffer{
   position: static !important;
+  color: black;
 }
 .ref-div{
   background: rgba(0, 0, 0, 0.5);
