@@ -44,7 +44,15 @@ Prelaunchr::Application.configure do
   config.assets.debug = true
 
 
+  config.default_url_options = 'http://dev2.showsofa.com:3000'
   # For mailer configs
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.smtp_settings = {
+    :address        => 'smtp.mailgun.org',
+    :port           => 587,
+    :authentication => :plain,
+    :user_name      => 'postmaster@dev2.showsofa.com',
+    :password       => '4b135d4eb7403b83da80721ad06aedff',
+    :domain         => "dev2.showsofa.com:3000"
+  }
   config.action_mailer.raise_delivery_errors = true
 end

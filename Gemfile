@@ -28,6 +28,7 @@ end
 group :development do
   gem 'byebug'
   gem 'pry'
+  gem "mail_view"
 end
 
 gem 'delayed_job_active_record'

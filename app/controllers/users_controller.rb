@@ -50,6 +50,10 @@ class UsersController < ApplicationController
             end
 
             @user.save
+        else
+         if @user.referals.size == 5
+           @user.send_email
+         end
         end
 
         # Send them over refer action
