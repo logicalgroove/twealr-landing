@@ -5,4 +5,8 @@
       UserMailer.signup_email(User.find(1))
     end
 
+    def grant_email
+      UserMailer.grant_email(User.find(1))
+    end
+
   end
