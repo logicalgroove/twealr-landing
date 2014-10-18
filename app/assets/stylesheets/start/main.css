@@ -367,14 +367,16 @@ ul.countdown li p {
 
 .site-footer.section-spacing { padding: 4.5em 0; }
 
-.site-footer h3 { margin: 0; }
-
 .site-footer .social {
   float: none;
   margin-bottom: 1.5em;
 }
 
 .site-footer small { color: #888; }
+
+.site-footer .footer-mailto {
+  padding: 1.5em;
+  display: block;}
 
 /* ==========================================================================
    scroll top
