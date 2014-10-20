@@ -2,8 +2,8 @@ $(function() {
     /* ==========================================================================
        Contact Form
        ========================================================================== */
-    
-    
+
+
     $('#contact-form').validate({
         highlight: function(element, errorClass) {
             $(element).fadeOut(function() {
@@ -19,7 +19,7 @@ $(function() {
                 required: true,
                 email: true
             },
-            
+
             message: {
                 required: true,
                 minlength: 10
@@ -56,7 +56,13 @@ $(function() {
     });
     "use strict";
 
+   /* ==========================================================================
+   *    countdown
+   * ========================================================================== */
 
+       $('.countdown').downCount({
+                 date: '01/12/2015 12:00:00' // m/d/y
+                    });
 
 
     /* ==========================================================================
@@ -102,7 +108,7 @@ $(function() {
     if ($(window).width() > 992) {
 
         $(window).on('scroll', function() {
-            $('.main').css('opacity', function() { return 1 - ($(window).scrollTop() / $(this).outerHeight()); }); }); }; /* ========================================================================== Textrotator ========================================================================== */ $(".rotate").textrotator({ animation: "dissolve", separator: ",", speed: 2500 }); 
+            $('.main').css('opacity', function() { return 1 - ($(window).scrollTop() / $(this).outerHeight()); }); }); }; /* ========================================================================== Textrotator ========================================================================== */ $(".rotate").textrotator({ animation: "dissolve", separator: ",", speed: 2500 });
 
     /* ==========================================================================
    ScrollTop Button
