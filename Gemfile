@@ -10,6 +10,7 @@ gem 'pg'
 gem 'activeadmin'
 
 gem 'high_voltage'
+gem "mail_view"
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rvm'
@@ -31,7 +32,6 @@ end
 group :development do
   gem 'byebug'
   gem 'pry'
-  gem "mail_view"
 end
 
 gem 'delayed_job_active_record'
