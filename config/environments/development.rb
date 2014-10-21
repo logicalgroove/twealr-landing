@@ -46,13 +46,16 @@ Prelaunchr::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'dev2.showsofa.com:3000' }
   # For mailer configs
-  config.action_mailer.smtp_settings = {
-    :address        => 'smtp.mailgun.org',
-    :port           => 587,
-    :authentication => :plain,
-    :user_name      => 'postmaster@dev2.showsofa.com',
-    :password       => '4b135d4eb7403b83da80721ad06aedff',
-    :domain         => "dev2.showsofa.com:3000"
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.zoho.com",
+    :port                 => 465,
+    :user_name            => 'testmailer@twealr.showsofa.com',
+    :password             => 'testmailer',
+    :authentication       => :login,
+    :ssl                  => true,
+    :tls                  => true,
+    :enable_starttls_auto => true
   }
   config.action_mailer.raise_delivery_errors = true
 end
