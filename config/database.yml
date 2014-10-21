@@ -18,9 +18,9 @@ test:
   database: prelaunchr
   host: localhost
 
-production:
+staging:
   adapter: postgresql
   database: prelaunchr
   username: twealr_landing
   host: localhost
-  password: VXnosYLYu4
+  password:
