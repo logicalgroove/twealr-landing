@@ -10,6 +10,9 @@ gem 'pg'
 gem 'activeadmin'
 
 gem 'high_voltage'
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
 
 
 # Gems used only for assets and not required

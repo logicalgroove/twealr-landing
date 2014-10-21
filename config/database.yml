@@ -21,4 +21,6 @@ test:
 production:
   adapter: postgresql
   database: prelaunchr
+  username: twealr_landing
   host: localhost
+  password: VXnosYLYu4
