@@ -580,3 +580,9 @@ body#refer .main-reffer{
   margin-top: 60px;
   margin-bottom: -24px;
 }
+.logo-blue{
+  color: #4cbbd6 !important;
+}
+.logo-blue-bg{
+  background: #4cbbd6 !important;
+}
