@@ -9,6 +9,7 @@ ActiveAdmin.register User do
       row :referrer
       row :created_at
       row :updated_at
+      row :expert
       row :referrals do
         user.referrals.blank? ? 'EMPTY' : user.referrals.map(&:email).join(', ')
       end
