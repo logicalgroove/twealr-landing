@@ -24,11 +24,17 @@
           <div class="row">
             <div class="col-md-5 center-block col-sm-8 col-xs-11">
               <%= form_for @user, :url => { :action => "create" }, id: 'mc-form' do |f| %>
-                <div class="input-group">
+                <div class="input-group" id="email-field">
                   <%= f.text_field :email, :placeholder => "Email", class: "form-control", required: true %>
                   <span class="input-group-btn">
-                  <button type="submit" class="btn btn-default" value="Subscribe" name="commit">Sign up<i class="fa fa-paper-plane"></i></button>
-                  </span> </div>
+                  <a href="#" class="btn btn-default" id="emailSubmit">Sign up<i class="fa fa-paper-plane"></i></a>
+                  </span>
+                </div>
+                <div class="form-inline" id="type-field" style="display:none;">
+                  <span="typeSpan">I am</span>
+                  <%= f.radio_button :expert, "0", checked: false, class: 'typeBox' %> <%= f.label :expert, 'Health Seeker' %>
+                  <%= f.radio_button :expert, "1", checked: false, class: 'typeBox' %> <%= f.label :expert, 'Health Expert' %>
+                </div>
                 <% end %>
               <p id="mc-notification"></p>
             </div>
