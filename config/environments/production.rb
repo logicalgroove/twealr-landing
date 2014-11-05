@@ -63,7 +63,18 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'www.example.com' }
+  config.action_mailer.default_url_options = { :host => 'twealr.co.uk' }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.zoho.com",
+    :port                 => 465,
+    :user_name            => 'info@twealr.com',
+    :password             => 'Prince12',
+    :authentication       => :login,
+    :ssl                  => true,
+    :tls                  => true,
+    :enable_starttls_auto => true
+  }
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
