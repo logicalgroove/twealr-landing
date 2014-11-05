@@ -70,7 +70,7 @@ Prelaunchr::Application.configure do
     :port                 => 465,
     :user_name            => 'info@twealr.com',
     :password             => 'Prince12',
-    :authentication       => :login,
+    :authentication       => :plain,
     :ssl                  => true,
     :tls                  => true,
     :enable_starttls_auto => true
