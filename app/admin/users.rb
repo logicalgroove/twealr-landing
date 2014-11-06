@@ -1,6 +1,16 @@
 ActiveAdmin.register User do
   actions :index, :show
 
+  index do
+    column :id
+    column :email
+    column :referral_code
+    column :created_at
+    column :expert
+    column "Referrals", :users_count
+    default_actions
+  end
+
   show do
     attributes_table do
       row :id
