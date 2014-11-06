@@ -4,11 +4,11 @@ class AddReferralsCount < ActiveRecord::Migration
 
     User.reset_column_information
     User.all.each do |u|
-      u.update_attribute :users_count, u.referrals.count
+      User.reset_counters(u.id, :referrals)
     end
   end
 
   def down
-    remove_column :projects, :users_count
+    remove_column :users, :users_count
   end
 end
