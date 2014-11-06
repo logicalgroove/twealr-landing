@@ -29,3 +29,14 @@ namespace :prelaunchr do
         }
     end
 end
+
+namespace :twealr do
+  desc 'Will print all members who won online consultation'
+  task :export_winners => :environment do
+    User.limit(100).where('expert = false AND users_count >= 5').each do |user|
+      CSV.open("#{Rails.root}/lib/assets/free_consultation.csv", "wb") do |csv|
+        csv << [user.email, user.referrals.count]
+      end
+    end
+  end
+end

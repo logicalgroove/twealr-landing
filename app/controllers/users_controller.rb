@@ -51,8 +51,8 @@ class UsersController < ApplicationController
 
             @user.save
 
-            #send grant 25 dollars email
-            if @user.referrer.present? && @user.referrer.referrals.size == 5
+            # send free consultation email
+            if @user.referrer.present? && (@user.referrer.referrals.size == 5) && (User.first(100).include?@user.referrer) && !(@user.referrer.expert)
               UserMailer.grant_email(@user.referrer).deliver
             end
         end
