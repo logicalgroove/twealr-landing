@@ -52,6 +52,10 @@ class User < ActiveRecord::Base
     end
 
     def send_welcome_email
+      if expert?
+        UserMailer.delay.he_signup_email(self)
+      else
         UserMailer.delay.signup_email(self)
+      end
     end
 end
