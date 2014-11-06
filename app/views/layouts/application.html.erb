@@ -26,7 +26,7 @@
 
 
 
-        <img src="/assets/start/logo2.png" data-at2x="/assets/start/logo@2x.png" alt="logo">
+        <% unless @user.persisted? %> <img src="/assets/start/logo2.png" data-at2x="/assets/start/logo@2x.png" alt="logo"> <% end %>
   <a class="footer-mailto logo-blue" href="mailto: info@twelr.com" >info@twealr.com</a>
         <!--social-->
 

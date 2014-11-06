@@ -4,30 +4,58 @@
     <div class="row">
       <div class="col-md-12"> 
         <!--logo-->
-        <div class="text-center"><img src="/assets/start/logo.png" data-at2x="/assets/start/logo@2x.png" alt="logo"></div>
+        <div class="text-center"><img src="/assets/start/logo2.png" data-at2x="/assets/start/logo@2x.png" alt="logo"></div>
         <!--logo end--> 
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
 
-        <!--welcome-message-->
-        <header class="text-center">
-          <h3 class='text-center' style="line-height: 1.5em; ">Congratulations on becoming a health expert at Twealr!</h3>
-          <h5>Share your unique link via email, Facebook <br>or Twitter</span></h5>
-        </header>
-        <!--welcome-message end-->
+        <% if @user.expert? %>
+          <!--welcome-message-->
+          <header class="text-center">
+          <h3 class='text-center' style="line-height: 1.5em; ">Congratulations on signing up as a health expert at Twealr. <br> Invite other health exlperts and grow your network.</h3>
+            <h5>Share your unique link via email, Facebook or Twitter</span></h5>
+          </header>
+          <!--welcome-message end-->
 
-        <!--sub-form-->
-<div class="hero">
-    <div class="page-content clearfix">
-          <br>
-          <% twitter_message = "yoyoyo" %>
-          <div class="ref-div col-lg-6 col-lg-offset-3 text-center" contenteditable="true" disabled="true" onclick="document.execCommand('selectAll',false,null)">
-            <%= root_url %>?ref=<%= @user.referral_code %>
+          <div class="hero">
+              <div class="page-content clearfix">
+                <% twitter_message = "yoyoyo" %>
+                <div class="ref-div col-lg-6 col-lg-offset-3 text-center" contenteditable="true" disabled="true" onclick="document.execCommand('selectAll',false,null)">
+                  <%= root_url %>?ref=<%= @user.referral_code %>
+                </div>
+              </div>
           </div>
-    </div>
-</div>
+        <% else %>
+          <!--welcome-message-->
+          <header class="text-center">
+            <h3 class='text-center' style="line-height: 1.5em; ">Congratulations on becoming a fellow Twealr!</h3>
+          </header>
+          <!--welcome-message end-->
+
+          <div class="hero">
+              <div class="page-content clearfix">
+                    <div class="col-lg-6 col-lg-offset-3 text-center">
+                      <h5>Want to get one free consultation and early access?</h5>
+                      <h5>Invite 5 friends to sign up at your unique url: </h5>
+                    </div>
+                    <% twitter_message = "yoyoyo" %>
+                    <div class="ref-div col-lg-6 col-lg-offset-3 text-center" contenteditable="true" disabled="true" onclick="document.execCommand('selectAll',false,null)">
+                      <%= root_url %>?ref=<%= @user.referral_code %>
+                    </div>
+                    <div class="col-lg-6 col-lg-offset-3">
+                      <br>
+                      <h5>Twealr is a new platform that enables health users to ask health experts any question online for free. Health users can also book online phone or video health consultations instantly at the touch of a button. 
+                      </h5>
+                      <h5>Twealr's mission is to be the best interactive health knowledge platform and online collaborative consulting platform. </h5>
+                      <h5>Help us spread our mission by inviting 5 friends to sign up to your unique url link above, and receive a free consultation with a health expert of your choice! This offer is limited to the first 100 members who sign up!</h5>
+                      
+                    </div>
+              </div>
+          </div>
+        <% end %>
+        <!--sub-form-->
 
         <!--sub-form end-->
 
