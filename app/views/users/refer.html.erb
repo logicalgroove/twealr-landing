@@ -15,18 +15,8 @@
           <!--welcome-message-->
           <header class="text-center">
           <h3 class='text-center' style="line-height: 1.5em; ">Congratulations on signing up as a health expert at Twealr. <br> Invite other health exlperts and grow your network.</h3>
-            <h5>Share your unique link via email, Facebook or Twitter</span></h5>
           </header>
           <!--welcome-message end-->
-
-          <div class="hero">
-              <div class="page-content clearfix">
-                <% twitter_message = "yoyoyo" %>
-                <div class="ref-div col-lg-6 col-lg-offset-3 text-center" contenteditable="true" disabled="true" onclick="document.execCommand('selectAll',false,null)">
-                  <%= root_url %>?ref=<%= @user.referral_code %>
-                </div>
-              </div>
-          </div>
         <% else %>
           <!--welcome-message-->
           <header class="text-center">
