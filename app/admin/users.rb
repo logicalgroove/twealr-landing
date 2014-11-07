@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  actions :index, :show
+  actions :index, :show, :destroy
 
   index do
     column :id
