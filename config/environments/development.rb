@@ -50,9 +50,9 @@ Prelaunchr::Application.configure do
   ActionMailer::Base.smtp_settings = {
     :address              => "smtp.zoho.com",
     :port                 => 465,
-    :user_name            => 'testmailer@twealr.showsofa.com',
-    :password             => 'testmailer',
-    :authentication       => :login,
+    :user_name            => 'info@twealr.com',
+    :password             => 'Prince12',
+    :authentication       => :plain,
     :ssl                  => true,
     :tls                  => true,
     :enable_starttls_auto => true
