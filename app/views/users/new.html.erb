@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12"> 
         <!--logo-->
-        <div class="text-center"><img src="/assets/start/logo.png" data-at2x="/assets/start/logo@2x.png" alt="logo"></div>
+        <div class="text-center"><img src="/assets/start/logo.png" data-at2x="/assets/start/logo.png" alt="logo"></div>
           <h3 class='text-center logo-header' style="line-height: 1.5em; ">Health knowledge at your fingertips. Ask. Share. Interact.<br> Together We Heal.</h3>
         <!--logo end--> 
       </div>
@@ -27,11 +27,12 @@
                 <div class="input-group" id="email-field">
                   <%= f.text_field :email, :placeholder => "Email", class: "form-control", required: true %>
                   <span class="input-group-btn">
-                  <button type="Submit" href="#" class="btn btn-default" id="emailSubmit">Sign Up<i class="fa fa-paper-plane"></i></button>
+                  <button type="Submit" href="#" class="btn btn-default" id="emailSubmit"><i class="fa fa-paper-plane"></i></button>
                   </span>
                 </div>
                 <div class="form-inline" id="type-field">
-                  <%= f.check_box :expert %> <%= f.label :expert, 'Tick this box if you are a health expert', class: 'expert-label small' %>
+                  <%= f.label :expert, 'Tick this box if you are a health expert', class: 'expert-label small' %>
+                  <%= f.check_box :expert %> 
                 </div>
                 <% end %>
               <p id="mc-notification"></p>
@@ -75,7 +76,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="wow fadeInUp product-features row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><img src="/assets/start/icon-1.png" data-at2x="/assets/start/icon-1@2x.png" alt="Features"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><img src="/assets/start/icon-1.png" data-at2x="/assets/start/icon-1.png" alt="Features"></div>
           <div class="col-md-9 col-sm-9 col-xs-9"> 
             <!--features 1-->
             <h4>Question & Answer Platform</h4>
@@ -91,7 +92,7 @@
       </div>
       <div class="col-md-6">
         <div class="wow fadeInUp product-features row">
-          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><img src="/assets/start/icon-2.png" data-at2x="/assets/start/icon-2@2x.png" alt="Features"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><img src="/assets/start/icon-2.png" data-at2x="/assets/start/icon-2.png" alt="Features"></div>
           <div class="col-md-9 col-sm-9 col-xs-9"> 
             <!--features 2-->
             <h4>Online Consultations</h4>
@@ -133,11 +134,12 @@
                   <div class="input-group" id="email-field">
                     <%= f.text_field :email, :placeholder => "Email", class: "form-control", required: true %>
                     <span class="input-group-btn">
-                    <button type="Submit" href="#" class="btn btn-default" id="emailSubmit">Join Us Today <i class="fa fa-paper-plane"></i></button>
+                    <button type="Submit" href="#" class="btn btn-default" id="emailSubmit"><i class="fa fa-paper-plane"></i></button>
                     </span>
                   </div>
                   <div class="form-inline" id="type-field">
-                    <%= f.check_box :expert %> <%= label :expert, 'Tick this box if you are a health expert', class: 'expert-label small' %>
+                    <%= label :expert, 'Tick this box if you are a health expert', class: 'expert-label small' %>
+                    <%= f.check_box :expert %> 
                   </div>
                   <% end %>
                 <p id="mc-notification"></p>
