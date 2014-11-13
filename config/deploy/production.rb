@@ -8,3 +8,10 @@ set :ssh_options, {
   forward_agent: true,
   auth_methods: %w(publickey)
 }
+
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+  task :restart do
+    invoke 'delayed_job:restart'
+  end
+end
