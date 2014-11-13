@@ -76,6 +76,7 @@ GEM
     coffee-script-source (1.4.0)
     colorize (0.7.3)
     columnize (0.8.9)
+    daemons (1.1.9)
     debugger-linecache (1.2.0)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
@@ -205,6 +206,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rvm
   coffee-rails (~> 3.2.1)
+  daemons
   delayed_job_active_record
   high_voltage
   mail_view
