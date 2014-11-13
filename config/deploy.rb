@@ -43,6 +43,7 @@ namespace :deploy do
       # Your restart mechanism here, for example:
        execute :touch, release_path.join('tmp/restart.txt')
     end
+    invoke 'delayed_job:restart'
   end
 
   after :publishing, :restart
@@ -53,13 +54,6 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
-    end
-  end
-
-  after 'deploy:publishing', 'deploy:restart'
-  namespace :deploy do
-    task :restart do
-      invoke 'delayed_job:restart'
     end
   end
 
