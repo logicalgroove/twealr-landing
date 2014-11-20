@@ -39,6 +39,11 @@ li {
   margin: 0;
 }
 
+.small {
+  font-size: 80%;
+}
+
+.light { color: #999 !important }
 /* ==========================================================================
    main
    ========================================================================== */
@@ -235,7 +240,6 @@ ul.countdown li p {
 .product-features { margin-bottom: 3em; }
 
 .product-features p {
-  margin-bottom: 0;
   color: #4C5454;
 }
 
